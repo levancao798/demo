@@ -1,0 +1,20 @@
+khai bao thu vien libpcap va libnet
+khai bao struct gom cac bien sau
+struct sift_stats
+khai bao cac bien dung de xuat ra man hinh ket qua
+struct sift_pack
+khai bao cac bien quan trong cho chuong trinh
+
+chuong trinh se gom 8 ham voi chuc nang cu the nhu sau:
+Ham 
+void sift_destroy(struct sift_pack *);
+
+void sift(struct sift_pack *);
+Ham 
+void sift_stats(struct sift_pack *);
+int build_packet(struct sift_pack *, char *);
+int write_packet(struct sift_pack *);
+int receive_packet(struct sift_pack *);
+void cleanup(int);
+int catch_sig(int, void(*)());
+void usage(char *);
